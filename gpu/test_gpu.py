@@ -32,3 +32,4 @@ if __name__=="__main__":
 '''bounds checking is not supported for CUD:
 https://stackoverflow.com/questions/60117150/bounds-checking-is-not-supported-for-cuda
 --> Replace @jit(nopython=True, target='cuda', boundscheck=False) with @jit 
+'''
