@@ -6,3 +6,5 @@ to be filled soon
 
 ## links
 [python survey 2019](https://www.jetbrains.com/lp/python-developers-survey-2019/)
+
+[800 machine learning components](https://paperswithcode.com/methods)
