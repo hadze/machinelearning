@@ -9,7 +9,7 @@ def func(a):
 		a[i]+= 1	
 
 # function optimized to run on gpu 
-@jit(target ="cuda")						 
+@jit						 
 def func2(a): 
 	for i in range(10000000): 
 		a[i]+= 1
@@ -28,3 +28,8 @@ if __name__=="__main__":
 	func2(a) 
 	print("with GPU:", timer()-start) 
 
+
+'''bounds checking is not supported for CUD:
+https://stackoverflow.com/questions/60117150/bounds-checking-is-not-supported-for-cuda
+--> Replace @jit(nopython=True, target='cuda', boundscheck=False) with @jit 
+'''
