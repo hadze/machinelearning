@@ -7,7 +7,6 @@ from tensorflow.contrib.tensorboard.plugins import projector
 
 import os
 import vocabs as voc
-import embedding as emb
 
 from gensim.models import KeyedVectors
 from gensim.test.utils import common_texts, get_tmpfile
