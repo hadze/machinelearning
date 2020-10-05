@@ -12,18 +12,19 @@ class Vocabs():
         self.tokenized = re.sub(r'\b[a-zA-Z]\b', '', self.tokenized)
         self.tokenized = self.tokenized.rstrip('\r\n')
         self.tokenized = self.tokenized.replace('\n', '')
-        self.tokenized = self.tokenized.replace('\t', '') 
+        self.tokenized = self.tokenized.replace('\t', ' ') 
         self.tokenized = self.tokenized.replace('\\',' ')
         self.tokenized = self.tokenized.replace('\\',' ')
-        self.tokenized = self.tokenized.replace('…','')
-        self.tokenized = self.tokenized.replace('�','')
-        # use while here for empty space char
-        self.tokenized = self.tokenized.replace('  ', ' ')  
-        self.tokenized = self.tokenized.replace('  ', ' ') 
-        self.tokenized = self.tokenized.replace('  ', ' ') 
-        self.tokenized = self.tokenized.replace('  ', ' ')  
-        self.tokenized = self.tokenized.replace('  ', ' ') 
-        self.tokenized = self.tokenized.replace('  ', ' ')  
+        #self.tokenized = self.tokenized.replace('…','')
+        #self.tokenized = self.tokenized.replace('�','')
+        self.tokenized = self.tokenized.strip()
+        self.tokenized = self.removeSpecialChar(self.tokenized) 
+        # self.tokenized = self.tokenized.replace('  ', ' ')  
+        # self.tokenized = self.tokenized.replace('  ', ' ') 
+        # self.tokenized = self.tokenized.replace('  ', ' ') 
+        # self.tokenized = self.tokenized.replace('  ', ' ')  
+        # self.tokenized = self.tokenized.replace('  ', ' ') 
+        # self.tokenized = self.tokenized.replace('  ', ' ')  
         self.tokenized = self.tokenized.replace('_', '')
 
 
@@ -42,3 +43,10 @@ class Vocabs():
 
     def len(self):
         return len(self.vocab.keys())
+
+    def removeSpecialChar(self, content):
+        newText = re.subn(r"[-()\"#/@;:<>{}`+=~|.!?,“”\[\*\]'^°²³µ%§$&…�—]", " ", content)
+        return newText[0]
+    
+    def cleanContent(content):
+        return -1
