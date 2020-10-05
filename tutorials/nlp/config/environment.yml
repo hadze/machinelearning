@@ -1,4 +1,4 @@
-name: mycondatextprediction
+name: myenvironment
 channels:
   - defaults
 dependencies:
@@ -85,4 +85,4 @@ dependencies:
     - termcolor==1.1.0
     - werkzeug==1.0.1
     - zipp==3.2.0
-prefix: /Users/arminhadzalic/opt/anaconda3/envs/mycondatextprediction
+prefix: /Users/arminhadzalic/opt/anaconda3/envs/myenvironment
