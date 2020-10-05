@@ -139,4 +139,4 @@ dmypy.json
 cython_debug/
 
 # some result folders
-checkpoint/
+checkpoints/
