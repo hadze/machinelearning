@@ -8,12 +8,15 @@ Example for the embedded words extracted from the wiki page about Italy and show
 This code will execute the following steps:
 
 * Create a checkpoint folder in order to store the meta and vectorfiles
-* Get any text from a folder with textfiles
-* Extract the tokens and vocabs
+* Get all text content from a folder with textfiles
+* Extract the tokens and vocabs from the text
 * Create a model
 * Create the word embeddings and meta data from the model
 * Save checkpoints
 * Finally visualize the embeddings in tensorboard
+
+**Attention:**<br/>
+The vectors and also the distances between them are **not trained** and therefore **not meaningful** in this version. I will show an trained example in the next episode.
 
 
 ## Sample textfile
