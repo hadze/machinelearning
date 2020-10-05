@@ -23,7 +23,7 @@ Anaconda was already installed on my system. It makes the installation of packag
 
 ## Environment
 
-In the config section you can find the environment.yml file containing the needed packages and libraries for this example. Basically I have used 
+In the config section you can find the [myenvironment.yml](https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/config/myenvironment.yml) file containing the needed packages and libraries for this example. Basically I have used 
   - python=3.7.9
   - gensim=3.8.0
   - tensorboard==1.12.2
