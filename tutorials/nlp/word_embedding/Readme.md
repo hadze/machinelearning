@@ -23,8 +23,13 @@ Anaconda was already installed on my system. It makes the installation of packag
 
 ## Environment
 
-In the config section you can find the environment.yml file containing the needed packages and libraries for this example.
-You just have to execute the following steps to get the environment running on your system:
+In the config section you can find the environment.yml file containing the needed packages and libraries for this example. Basically I have used 
+  - python=3.7.9
+  - gensim=3.8.0
+  - tensorboard==1.12.2
+  - tensorflow==1.13.0rc1
+
+You just have to execute the following steps to get the needed environment running on your system:
 
 * Open terminal or console application on your system
 * Create conda environment and install all needed packages: conda env create -f environment.yml
