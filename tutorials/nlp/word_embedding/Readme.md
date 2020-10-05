@@ -32,7 +32,7 @@ In the config section you can find the [myenvironment.yml](https://github.com/ha
 You just have to execute the following steps to get the needed environment running on your system:
 
 * Open terminal or console application on your system
-* Create conda environment and install all needed packages: conda env create -f environment.yml
+* Create conda environment and install all needed packages: **conda env create -f myenvironment.yml**
 
 ## Sample textfile
 italy.txt taken from https://en.wikipedia.org/wiki/Italy
