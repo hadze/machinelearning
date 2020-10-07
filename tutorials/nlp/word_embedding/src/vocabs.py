@@ -15,23 +15,13 @@ class Vocabs():
         self.tokenized = self.tokenized.replace('\t', ' ') 
         self.tokenized = self.tokenized.replace('\\',' ')
         self.tokenized = self.tokenized.replace('\\',' ')
-        #self.tokenized = self.tokenized.replace('…','')
-        #self.tokenized = self.tokenized.replace('�','')
         self.tokenized = self.tokenized.strip()
         self.tokenized = self.removeSpecialChar(self.tokenized) 
-        # self.tokenized = self.tokenized.replace('  ', ' ')  
-        # self.tokenized = self.tokenized.replace('  ', ' ') 
-        # self.tokenized = self.tokenized.replace('  ', ' ') 
-        # self.tokenized = self.tokenized.replace('  ', ' ')  
-        # self.tokenized = self.tokenized.replace('  ', ' ') 
-        # self.tokenized = self.tokenized.replace('  ', ' ')  
         self.tokenized = self.tokenized.replace('_', '')
-
 
         self.tokenized = self.tokenized.split(' ')
 
         while '' in self.tokenized: self.tokenized.remove('')
-        
         
     def numberize(self):
         """numbering the tokenized text by just taking each word

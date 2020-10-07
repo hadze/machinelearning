@@ -132,6 +132,7 @@ def visualize_embeddings(summary_writer, word_embeddings_name, metadata_path = M
 
 create_checkpoint()
 text = get_some_text(r'/Users/arminhadzalic/Projects/nlp/data_raw/textfiles/')
+
 sentences = create_sentences(text)
 model = create_model(sentences, getbigmodell=False)
 vocabs, embeddings = create_word_embedding(model)
