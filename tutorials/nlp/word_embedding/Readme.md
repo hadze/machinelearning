@@ -5,6 +5,8 @@ Example for the embedded words extracted from the wiki page about Italy and show
 
 ## Description
 
+Generally speaking, converting words to vectors, or word vectorization, is a natural language processing (NLP) process. The process uses language models / techniques to map words into vector space. In fact it represents each word by a vector of real numbers. Meanwhile, it allows words with similar meanings have similar representations.
+
 This code will execute the following steps:
 
 * Create a checkpoint folder in order to store the meta and vectorfiles
