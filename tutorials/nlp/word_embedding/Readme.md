@@ -44,3 +44,6 @@ You just have to execute the following steps to get the needed environment runni
 
 ## Sample textfile
 italy.txt taken from https://en.wikipedia.org/wiki/Italy
+
+protocols from the german parliament taken from (history from "Plenarprotokoll 148. Sitzung am 13.01.2016 - Plenarprotokoll 13.Sitzung am 21.02.2018")
+https://www.bundestag.de/dokumente/protokolle/plenarprotokolle/plenarprotokolle
