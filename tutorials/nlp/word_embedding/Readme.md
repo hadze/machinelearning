@@ -2,6 +2,9 @@
 
 Example for the embedded words extracted from the wiki page about Italy and shown in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
+
+
+Example for the embedded words extracted from the protocols of the german parliament and shown in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_class_party.gif" width="800" height="500"/>
 
 
