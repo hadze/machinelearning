@@ -11,6 +11,8 @@ Here we can see that the system has learned from almost 40.000 words that e.g. t
 * Auto
 * Krieg
 
+<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_bild_zeiteinheiten.png" width="800" height="500"/><br/>
+Here we can see that the system can assign time units. So the search for "days" results in hits like "years" and "weeks".
 <br/>The training took about 15 min on a MacBook Pro  
 
 
