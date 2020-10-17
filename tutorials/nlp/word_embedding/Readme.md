@@ -6,7 +6,7 @@ Example for the embedded words extracted from the wiki page about Italy and show
 
 Example for the embedded words extracted from the protocols of the german parliament and shown in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_class_party.gif" width="800" height="500"/>
-
+Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party and is able to list the other parties as well. So it shows their vectorial proximity to the search term CDU.  
 
 
 ## Description
