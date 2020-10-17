@@ -10,6 +10,7 @@ Here we can see that the system has learned from almost 40.000 words that e.g. t
 * Umwelt
 * Auto
 * Krieg
+
 <br/>The training took about 15 min on a MacBook Pro  
 
 
