@@ -8,13 +8,11 @@ from tensorflow.contrib.tensorboard.plugins import projector
 import os
 import vocabs as voc
 
-from gensim.models import KeyedVectors
-from gensim.test.utils import common_texts, get_tmpfile
+#from gensim.models import KeyedVectors
+#from gensim.test.utils import common_texts, get_tmpfile
 from gensim.models import Word2Vec
 import gensim.downloader as api
 from gensim.utils import simple_preprocess
-
-from gensim.scripts.glove2word2vec import glove2word2vec
 
 import epochlogger as epoch
 
@@ -33,14 +31,13 @@ MODELNAME = 'word2vec.model'
 SAVEDVECTORDATA = r'saved_vectordata.dat'
 SAVEDVECTORDATA_PATH = MODELPATH + SAVEDVECTORDATA
 TEXTSOURCE = r'/Path/to/your/textfiles/'
+
 ##################################################################################################
 # Methods
 def create_checkpoint():
     if not os.path.exists(CHECKPOINT): os.mkdir(CHECKPOINT)
 
 def get_text_from_files(inputdir):
-    #textfile = '/Users/projects/nlp/data/19009-data.txt'
-   
     text = []
     for filename in os.listdir(inputdir):
         path = inputdir + filename
@@ -57,34 +54,7 @@ def get_text_from_files(inputdir):
     #text = 'Armin ist Fußballer. Neymar ist ein Fußballer. Fußball ist ein Sport. Handball ist ein Sport.'
     return text
 
-def create_sentences(text):
-    print('Creating the sentences...')
-    tokenizedVocabs = voc.Vocabs(text)
-    print('Creating the sentences...done')
-    return tokenizedVocabs.tokenized
-
-def create_glove_model():
-    # load pre-trained word-vectors from gensim-data
-    print('Creating big model...')
-    model = api.load('glove-wiki-gigaword-100')
-    model.save(MODELPATH+MODELNAME)
-    print('Creating big model...done.')
-    return model
-
-def create_model(sentences):
-    print('Creating the model...')
-    model = Word2Vec([sentences], min_count=1)
-    print('Creating the model...done.')
-    return model
-
-def get_model(modelpath = MODELPATH, modelname = MODELNAME):
-    model = None
-    if os.path.exists(modelpath + modelname):
-        model = KeyedVectors.load(modelpath + modelname, mmap='r')
-    return model
-
 def create_word_embedding(model):
-    
     EMBED_SIZE = model.vector_size
     VOCAB_LEN = len(model.wv.index2word)
 
@@ -144,26 +114,7 @@ def visualize_embeddings(summary_writer, word_embeddings_name, metadata_path = M
 
     print('Metadata linked to checkpoint')
     print('Run: tensorboard --logdir checkpoints/')
-
-def read_input(input_file):
-    with open(input_file, 'rb') as f:
-        for i, line in enumerate(f):
-            if (i % 100 == 0):
-                print('read {0} lines'.format(i))
-            # do some pre-processing and return list of words for each line
-            # text
-            text = text + simple_preprocess(line)
-        return text
-        
-def train_new_sentences(model, new_sentences):
-    print(f'Training new data. Model format is: {type(model.wv)}')
-    print(f'Training new data. NewSentences format is: {type(new_sentences)}')
-
-    model = Word2Vec(iter=1)  # an empty model, no training yet
-    model.build_vocab(new_sentences)  # can be a non-repeatable, 1-pass generator
-    model.train(new_sentences, total_examples=model.corpus_count, epochs=model.epochs)    
-    model.save(SAVEDVECTORDATA_PATH +'_new_sentences')
-
+   
 def train_new_datafiles(documents, outfile):
     print('Build vocabulary and train model...')
     model = Word2Vec(
@@ -188,28 +139,7 @@ def train_new_datafiles(documents, outfile):
 create_checkpoint()
 sentences = get_text_from_files(TEXTSOURCE)
 
-'''
-model = get_model()
-if model is None:
-    #model = create_model(sentences)
-    #model = create_glove_model()
-    None
-'''
-
 model = train_new_datafiles(sentences, SAVEDVECTORDATA_PATH)
-#similarity = model.similarity('woman', 'man')
-
-'''
-new_sentences = [ 
-['I love ice-cream', 'he loves ice-cream', 'you love ice cream'],
-['we love ice-cream', 'she loves ice-cream', 'you love ice cream']]   
-
-train_new_sentences(model, new_sentences)
-
-data_file = r'/Users/arminhadzalic/Projects/innoweek/data_temp/data_raw/allsplsingle/TinaTest.utf8'
-documents = list(read_input(data_file))
-model = train_new_datafiles(documents, SAVEDVECTORDATA_PATH)
-'''
 
 vocabs, embeddings = create_word_embedding(model)
 summary_writer = save_checkpoint()
