@@ -38,14 +38,14 @@ The vectors and also the distances between them are **not trained** and therefor
 ## Parameters
 
 **used codesnippet**
-~~~
+~~~python
 model = Word2Vec(
         documents,
         size=150,
         window=10,
         min_count=4,
         workers=10)
-        
+
 model.train(documents, total_examples=len(documents), epochs=10, callbacks=[epoch_logger])
 ~~~
 **size**
