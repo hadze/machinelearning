@@ -119,17 +119,17 @@ def train_new_datafiles(documents, outfile):
     print('Build vocabulary and train model...')
     model = Word2Vec(
         documents,
-        size=200,
+        size=100,
         window=10,
         min_count=4,
         workers=10)
 
     epoch_logger = epoch.EpochLogger()
-    model.train(documents, total_examples=len(documents), epochs=100, callbacks=[epoch_logger])
+    model.train(documents, total_examples=len(documents), epochs=10, callbacks=[epoch_logger])
 
     print('Build vocabulary and train model...done.')
     # save only the word vectors
-    model.wv.save(outfile+'_new_datafiles')
+    model.wv.save(outfile)
 
     return model
 
