@@ -38,30 +38,37 @@ The vectors and also the distances between them are **not trained** and therefor
 ## Parameters
 
 **used codesnippet**
+~~~
 model = Word2Vec(
         documents,
         size=150,
         window=10,
         min_count=4,
         workers=10)
+        
 model.train(documents, total_examples=len(documents), epochs=10, callbacks=[epoch_logger])
-
+~~~
 **size**
+
 The size of the dense vector to represent each token or word (i.e. the neighboring words). In this context one sometimes also speaks of the dimensions of a token. If you have only few data, it is better to work with a smaller size since you would only have so many unique neighbors for a given word. For larger amounts of data you are welcome to experiment with various sizes. A value of 100–150 has worked well for me for similarity lookups.
 
 **window**
+
 The maximum distance between the target word and its neighboring word.  In theory, a smaller window should give you terms that are more related. 
 
 Important note:
 if your data is not sparse, then the window size should not matter too much. If you are not too sure about this, just use the default value.
 
 **min_count**
+
 Minimum frequency of words. The model ignores words that do not meet the min_count. Extremely rare words are usually unimportant, so it is best to get rid of them. The parameter does not really influence the model in terms of your final results. The settings here rather affect the memory usage and memory requirements of the model files.
 
 **workers**
+
 Specifies how many threads can be started in the background. Faster training possible depending on how many CPUs can be used.
 
 **epochs**
+
 Number of iterations (epochs) over the text corpus. 5 is a good starting point. I always use a minimum of 10 iterations.
 
 
