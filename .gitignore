@@ -140,3 +140,7 @@ cython_debug/
 
 # some result folders
 checkpoints/
+
+# some setting files
+launch.json
+settings.json
