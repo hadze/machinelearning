@@ -138,8 +138,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# some result folders
+# some result folders / files
 checkpoints/
+.dat
+.tsv
 
 # some setting files
 launch.json
