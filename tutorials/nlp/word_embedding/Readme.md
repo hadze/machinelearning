@@ -4,7 +4,7 @@ Example for the embedded words extracted from the wiki page about Italy and show
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
 
 
-Example for the embedded words extracted from the protocols of the german parliament and shown in the tensorboard window:
+Example for the embedded words extracted from the protocols of the german parliament and show them in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_class_party.gif" width="800" height="500"/><br/>
 Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party. In other words: the system is able to list the other parties as well. In fact, it shows their vectorial proximity to the search term CDU. Other keywords that you could use are:
 * Umwelt (environment)
