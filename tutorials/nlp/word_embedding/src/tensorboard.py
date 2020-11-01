@@ -14,9 +14,12 @@ from gensim.models import Word2Vec
 import gensim.downloader as api
 from gensim.utils import simple_preprocess
 
-import epochlogger as epoch
+#from tensorflow.keras.callbacks import TensorBoard
 
+import epochlogger as epoch
 import numpy as np
+from pathlib import Path
+import time
 
 ##################################################################################################
 # Constants
@@ -31,7 +34,7 @@ MODELNAME = 'word2vec.model'
 SAVEDVECTORDATA = r'saved_vectordata.dat'
 SAVEDVECTORDATA_PATH = MODELPATH + SAVEDVECTORDATA
 TEXTSOURCE = r'/Path/to/your/textfiles/'
-
+TIME = f'_{time.localtime()}'
 ##################################################################################################
 # Methods
 def create_checkpoint():
@@ -40,18 +43,17 @@ def create_checkpoint():
 def get_text_from_files(inputdir):
     text = []
     for filename in os.listdir(inputdir):
+        print(f'Getting file: {filename}')
         path = inputdir + filename
 
         with open(path, 'rb') as f:
             for i, line in enumerate(f):
                 if (i % 100 == 0):
-                    print('read {0} lines'.format(i))
+                    print(f'read {i} lines')
             # do some pre-processing and return list of words for each line
             # text
                 text.append(simple_preprocess(line))
-        print(f'Getting and processed file: {filename}')
- 
-    #text = 'Armin ist Fußballer. Neymar ist ein Fußballer. Fußball ist ein Sport. Handball ist ein Sport.'
+        print(f'Processed file: {filename}')
     return text
 
 def create_word_embedding(model):
@@ -75,16 +77,14 @@ def create_word_embedding(model):
     print(f'Vocab length is: {VOCAB_LEN}.')
     print(f'Embedding size is: {EMBED_SIZE}.')
 
-    # define the model without training
+    # initialize tensors with start values (not trained)
     sess = tf.InteractiveSession()
-
     embedding = tf.Variable(placeholder, trainable=False, name=TENSORNAME)
     tf.global_variables_initializer().run()
 
     return modelspace, embedding
 
 def save_checkpoint():
-
     # Saver
     saver = tf.train.Saver(tf.global_variables())
     # start session
@@ -117,29 +117,39 @@ def visualize_embeddings(summary_writer, word_embeddings_name, metadata_path = M
    
 def train_new_datafiles(documents, outfile):
     print('Build vocabulary and train model...')
+    epoch_logger = epoch.EpochLogger()
     model = Word2Vec(
         documents,
         size=100,
-        window=10,
+        window=20,
         min_count=4,
-        workers=10)
-
-    epoch_logger = epoch.EpochLogger()
-    model.train(documents, total_examples=len(documents), epochs=10, callbacks=[epoch_logger])
+        workers=10,        
+        iter=500,
+        callbacks=[epoch_logger])
 
     print('Build vocabulary and train model...done.')
-    # save only the word vectors
-    model.wv.save(outfile)
+    print('Save model...')
+    model.save(outfile)
 
     return model
 
+def load_model(path):
+    mypath = Path(path) 
+    if mypath.exists():
+        print('Model file already exists. Loading...')
+        model = Word2Vec.load(path)
+        print('Loading...done')
+        return model
+    print('No existing model file detected.')
+    return None
 ##################################################################################################
 # Main
-
 create_checkpoint()
-sentences = get_text_from_files(TEXTSOURCE)
 
-model = train_new_datafiles(sentences, SAVEDVECTORDATA_PATH)
+model = load_model(SAVEDVECTORDATA_PATH)
+if model is None:
+    sentences = get_text_from_files(TEXTSOURCE)
+    model = train_new_datafiles(sentences, SAVEDVECTORDATA_PATH)
 
 vocabs, embeddings = create_word_embedding(model)
 summary_writer = save_checkpoint()
