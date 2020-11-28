@@ -29,10 +29,10 @@ This code will execute the following steps:
 * Save checkpoints
 * Finally visualize the embeddings in tensorboard
 
-<!-->
+<!--
 **Attention:**<br/>
 The vectors and also the distances between them are **not trained** and therefore **not meaningful** in this version. I will show an trained example in the next episode.
-<-->
+-->
 
 ## Parameters
 
