@@ -1,12 +1,8 @@
 # Visualize Word Embeddings with Tensorboard
 
-Example for the embedded words extracted from the wiki page about Italy and show them in the tensorboard window:
-<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
-
-
-Example for the embedded words extracted from the protocols of the german parliament and show them in the tensorboard window:
+Example for the embedded words extracted from the [protocols](https://www.bundestag.de/dokumente/protokolle/plenarprotokolle/plenarprotokolle) of the german parliament and show them in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_class_party.gif" width="800" height="500"/><br/>
-Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party. In other words: the system is able to list the other parties as well. In fact, it shows their vectorial proximity to the search term CDU. Other keywords that you could use are:
+Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party. In other words: The system is able to list the other parties as well. In fact, it shows their vectorial proximity to the search term CDU. Other keywords that one could use are:
 * Umwelt (environment)
 * Auto (car)
 * Krieg (war)
@@ -15,6 +11,9 @@ Here we can see that the system has learned from almost 40.000 words that e.g. t
 Here we can see that the system can assign time units. So the search for "days" results in hits like "years" and "weeks".
 <br/>The training took about 15 min on a MacBook Pro  
 
+
+Example for the embedded words extracted from the wiki page about [Italy](https://en.wikipedia.org/wiki/Italy)and show them in the tensorboard window:
+<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
 
 ## Description
 
@@ -57,7 +56,6 @@ The size of the dense vector to represent each token or word (i.e. the neighbori
 **window**
 
 The maximum distance between the target word and its neighboring word. In theory, a smaller window should give you terms that are more related. 
-
 Important note:
 if your data is not sparse, then the window size should not matter too much. If you are not too sure about this, just use the default value.
 
