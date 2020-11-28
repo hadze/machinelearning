@@ -12,7 +12,7 @@ Here we can see that the system can assign time units. So the search for "days" 
 <br/>The training took about 15 min on a MacBook Pro  
 
 
-Example for the embedded words extracted from the wiki page about [Italy](https://en.wikipedia.org/wiki/Italy)and show them in the tensorboard window:
+Example for the embedded words extracted from the wiki page about [Italy](https://en.wikipedia.org/wiki/Italy) and show them in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
 
 ## Description
