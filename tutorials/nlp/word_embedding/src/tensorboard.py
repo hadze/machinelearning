@@ -101,9 +101,8 @@ def save_checkpoint():
     return summary_writer
 
 def visualize_embeddings(summary_writer, word_embeddings_name, metadata_path = METADATA):
-    """
-        Link metadata tsv file to embedding
-    """
+    # Link metadata tsv file to embedding
+    
     config = projector.ProjectorConfig()
 
     embedding = config.embeddings.add() # could add more metadata files here
