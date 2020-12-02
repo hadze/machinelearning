@@ -17,6 +17,7 @@ Example for the embedded words extracted from the wiki page about [Italy](https:
 
 ## Description
 
+You can find more details for this project on my [homepage](https://www.hadzalic.de/visualize-word-embeddings-with-tensorboard#page-content)
 Generally speaking, converting words to vectors, or word vectorization, is a natural language processing (NLP) process. The process uses language models / techniques to map words into vector space. In fact it represents each word by a vector of real numbers. This finally leads to the fact that words with similar vectors also have similar meanings or at least a strong relationship. 
 
 This code will execute the following steps:
