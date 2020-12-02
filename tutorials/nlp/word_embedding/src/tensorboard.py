@@ -101,9 +101,8 @@ def save_checkpoint():
     return summary_writer
 
 def visualize_embeddings(summary_writer, word_embeddings_name, metadata_path = METADATA):
-    """
-        Link metadata tsv file to embedding
-    """
+    # Link metadata tsv file to embedding
+    
     config = projector.ProjectorConfig()
 
     embedding = config.embeddings.add() # could add more metadata files here
@@ -155,5 +154,8 @@ vocabs, embeddings = create_word_embedding(model)
 summary_writer = save_checkpoint()
 visualize_embeddings(summary_writer, embeddings.name, METADATA)
 
-# Start cmd with:
-# python /Users/arminhadzalic/opt/ananda3/pkgs/tensorboard-1.13.1-py37haf313ee_0/lib/python3.7/site-packages/tensorboard/main.py --logdir /Users/arminhadzalic/Projects/nlp/checkpoints
+##################################################################################################
+# 1) Start cmd with:
+#    python /Users/arminhadzalic/opt/ananda3/pkgs/tensorboard-1.13.1-py37haf313ee_0/lib/python3.7/site-packages/tensorboard/main.py --logdir /Users/arminhadzalic/Projects/nlp/checkpoints
+# 2) adapt the paths according your local environment
+# 3) the result is shown under http://localhost:6006/#projector&run=. For me the best result was shown with Chrome browser (Safari didn't work)

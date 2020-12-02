@@ -1,12 +1,8 @@
 # Visualize Word Embeddings with Tensorboard
 
-Example for the embedded words extracted from the wiki page about Italy and show them in the tensorboard window:
-<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
-
-
-Example for the embedded words extracted from the protocols of the german parliament and show them in the tensorboard window:
+Example for the embedded words extracted from the [protocols](https://www.bundestag.de/dokumente/protokolle/plenarprotokolle/plenarprotokolle) of the german parliament and show them in the tensorboard window:
 <img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/pointcloud_class_party.gif" width="800" height="500"/><br/>
-Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party. In other words: the system is able to list the other parties as well. In fact, it shows their vectorial proximity to the search term CDU. Other keywords that you could use are:
+Here we can see that the system has learned from almost 40.000 words that e.g. the term CDU belongs to one party. In other words: The system is able to list the other parties as well. In fact, it shows their vectorial proximity to the search term CDU. Other keywords that one could use are:
 * Umwelt (environment)
 * Auto (car)
 * Krieg (war)
@@ -16,9 +12,13 @@ Here we can see that the system can assign time units. So the search for "days" 
 <br/>The training took about 15 min on a MacBook Pro  
 
 
+Example for the embedded words extracted from the wiki page about [Italy](https://en.wikipedia.org/wiki/Italy) and show them in the tensorboard window:
+<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/nlp/word_embedding/doc/italy_tensorboard.gif" width="800" height="500"/>
+
 ## Description
 
-Generally speaking, converting words to vectors, or word vectorization, is a natural language processing (NLP) process. The process uses language models / techniques to map words into vector space. In fact it represents each word by a vector of real numbers. Meanwhile, it allows words with similar meanings have similar representations.
+You can find more details for this project on my [homepage](https://www.hadzalic.de/visualize-word-embeddings-with-tensorboard#page-content).
+Generally speaking, converting words to vectors, or word vectorization, is a natural language processing (NLP) process. The process uses language models / techniques to map words into vector space. In fact it represents each word by a vector of real numbers. This finally leads to the fact that words with similar vectors also have similar meanings or at least a strong relationship. 
 
 This code will execute the following steps:
 
@@ -30,10 +30,10 @@ This code will execute the following steps:
 * Save checkpoints
 * Finally visualize the embeddings in tensorboard
 
-<!-->
+<!--
 **Attention:**<br/>
 The vectors and also the distances between them are **not trained** and therefore **not meaningful** in this version. I will show an trained example in the next episode.
-<-->
+-->
 
 ## Parameters
 
@@ -57,7 +57,6 @@ The size of the dense vector to represent each token or word (i.e. the neighbori
 **window**
 
 The maximum distance between the target word and its neighboring word. In theory, a smaller window should give you terms that are more related. 
-
 Important note:
 if your data is not sparse, then the window size should not matter too much. If you are not too sure about this, just use the default value.
 
@@ -93,5 +92,5 @@ You just have to execute the following steps to get the needed environment runni
 ## Sample textfile
 italy.txt taken from https://en.wikipedia.org/wiki/Italy
 
-protocols from the german parliament taken from (history from "Plenarprotokoll 148. Sitzung am 13.01.2016 - Plenarprotokoll 13.Sitzung am 21.02.2018")
+protocols of the german parliament taken from (history from "Plenarprotokoll 148. Sitzung am 13.01.2016 - Plenarprotokoll 13.Sitzung am 21.02.2018")
 https://www.bundestag.de/dokumente/protokolle/plenarprotokolle/plenarprotokolle
