@@ -147,3 +147,14 @@ checkpoints/
 # some setting files
 launch.json
 settings.json
+
+# media files
+*.mp4
+*.png
+*.gif
+
+# documentation
+*.pptx
+
+# some datafiles
+*.icloud
