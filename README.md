@@ -10,3 +10,5 @@ to be filled soon
 [800 machine learning components](https://paperswithcode.com/methods)
 
 [project based learning (python)](https://github.com/tuvtran/project-based-learning#python)
+
+[fucking awsome python](https://github.com/trananhkma/fucking-awesome-python)
