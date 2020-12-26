@@ -9,3 +9,7 @@ I hope it can be of use to some of you.
 The original post can be found [on Medium](https://ahadzalic.medium.com/visualize-machine-learning-metrics-with-tensorflow-and-tensorboard-6928db082830)
 
 ![example](https://github.com/hadze/machinelearning/blob/master/tutorials/tensorboard/doc/results.png)
+
+# Example files for displaying results in Tensorboard
+
+In the logger folder there are some files which were generated during a training process of a sample dataset. You can use them to be displayed in Tensorboard. In order to do so, just start "tensorboard -logdir=LOGDIR" in any console or terminal program –> and enter localhost 127.0.0.1:6006 on your the browser - ideally on Chrome, since it offers the most stable view.
