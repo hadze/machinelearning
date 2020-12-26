@@ -6,5 +6,6 @@ It can be very time-consuming to read out individual results numerically, especi
 This has already cost me some precious time and nerves in the past. Fortunately, there are some tools out there that can help. 
 In the following example I would like to show you an application with which both the architecture and some important metrics of underlying algorithms are shown. 
 I hope it can be of use to some of you.
+The original post can be found [on Medium](https://ahadzalic.medium.com/visualize-machine-learning-metrics-with-tensorflow-and-tensorboard-6928db082830)
 
 ![example](https://github.com/hadze/machinelearning/blob/master/tutorials/tensorboard/doc/results.png)
