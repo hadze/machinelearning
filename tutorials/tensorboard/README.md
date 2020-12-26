@@ -3,5 +3,6 @@ An important step in understanding machine learning processes and evaluations is
 
 It can be very time-consuming to read out individual results numerically, especially if the model has been trained for many epochs. 
 This has already cost me some precious time and nerves in the past. Fortunately, there are some tools out there that can help. 
-In the following example I would like to show you an example with which both the architecture and some important metrics of underlying algorithms are shown. 
+In the following example I would like to show you an application with which both the architecture and some important metrics of underlying algorithms are shown. 
 I hope it can be of use to some of you.
+
