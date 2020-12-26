@@ -12,4 +12,4 @@ The original post can be found [on Medium](https://ahadzalic.medium.com/visualiz
 
 # Example files for displaying results in Tensorboard
 
-In the logger folder there are some files which were generated during a training process of a sample dataset. You can use them to be displayed in Tensorboard. In order to do so, just start "tensorboard -logdir=LOGDIR" in any console or terminal program –> and enter localhost 127.0.0.1:6006 on your the browser - ideally on Chrome, since it offers the most stable view.
+In the logger folder there are some files which were generated during a training process of a sample dataset. You can use them to be displayed in Tensorboard. In order to do so, just start **"tensorboard -logdir=LOGDIR"** in any console or terminal program –> and enter localhost **127.0.0.1:6006** on your the browser - ideally on Chrome, since it offers the most stable view.
