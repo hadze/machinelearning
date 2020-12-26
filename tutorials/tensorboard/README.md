@@ -8,7 +8,7 @@ In the following example I would like to show you an application with which both
 I hope it can be of use to some of you.
 The original post can be found [on Medium](https://ahadzalic.medium.com/visualize-machine-learning-metrics-with-tensorflow-and-tensorboard-6928db082830)
 
-![example]<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/tensorboard/doc/results.png" width="400" height="200"/>
+<img src="https://github.com/hadze/machinelearning/blob/master/tutorials/tensorboard/doc/results.png" width="600" height="300"/>
 
 # Example files for displaying results in Tensorboard
 
