@@ -158,3 +158,6 @@ settings.json
 
 # some datafiles
 *.icloud
+
+# annoying mac os stuff
+*.DS_Store
