@@ -43,7 +43,6 @@ def PreProcessing(rawfile):
     print(target)
     df_convertedtarget.shape
     # separating out the target
-    #y = df_converted.loc[:, ['Result']].values
     y = df_converted.loc[:, target].values
 
     return x, y, features
@@ -111,7 +110,7 @@ def ExecuteNeuralNetwork(x, y):
     loss = 'sparse_categorical_crossentropy' #sparse_categorical_crossentropy, mean_squared_error
 
     model = tf. keras.models.Sequential([
-        tf.keras.layers.Flatten(input_shape=(10,)),
+        tf.keras.layers.Flatten(input_shape=(10,)), # 10 features
         tf.keras.layers.Dense(128, activation=modelActivation),
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(10, activation='sigmoid') #sigmoid, softmax
@@ -137,7 +136,6 @@ x, y, features = PreProcessing(rawfile)
 ExecuteNeuralNetwork(x, y)
 #ExecuteRandomForestClassifier(x, y, features)
 #ExecuteDecisionTreeClassifier(x, y, features)
-
 
 
 ###################################################################
