@@ -1,0 +1,2 @@
+model_checkpoint_path: "word_embeddings-1"
+all_model_checkpoint_paths: "word_embeddings-1"
