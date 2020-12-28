@@ -3,6 +3,7 @@ This repository contains some [tutorials](https://github.com/hadze/machinelearni
 
 
 ## kaggle competitions
+More about this soon, too...
 
 ## links
 [python survey 2019](https://www.jetbrains.com/lp/python-developers-survey-2019/)
