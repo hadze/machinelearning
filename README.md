@@ -1,5 +1,5 @@
 # machinelearning
-to be filled soon
+This repository contains some tutorials I programmed to learn more about MachineLearning topics. I hope you find it useful. Currently I am busy creating a ML framework to be able to react faster to requests and competitions. More about this soon... 
 
 
 ## kaggle competitions
