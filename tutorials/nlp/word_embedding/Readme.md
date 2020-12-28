@@ -94,3 +94,15 @@ italy.txt taken from https://en.wikipedia.org/wiki/Italy
 
 protocols of the german parliament taken from (history from "Plenarprotokoll 148. Sitzung am 13.01.2016 - Plenarprotokoll 13.Sitzung am 21.02.2018")
 https://www.bundestag.de/dokumente/protokolle/plenarprotokolle/plenarprotokolle
+
+## Quickstart
+One can start directly Tensorboard and exploring the already trainied model which is located [in the models folder.](https://github.com/hadze/machinelearning/tree/master/tutorials/nlp/word_embedding/models/german_parliament/2020_12)
+
+To do so, just start in your favorite terminal program:
+python /Path/to/your/environments.../envs/wordembeddings/lib/python3.7/site-packages/tensorboard/main.py --logdir "Path/to/the/above/mentioned/model.../models/german_parliament/2020_12"
+
+And then enter in Chrome-Browser:
+http://localhost:6006/#projector&run= 
+For me the best result was shown with Chrome browser (Safari didn't work)
+
+Explore the Pointcloud
