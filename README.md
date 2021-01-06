@@ -13,3 +13,15 @@ More about this soon, too...
 [project based learning (python)](https://github.com/tuvtran/project-based-learning#python)
 
 [fucking awsome python](https://github.com/trananhkma/fucking-awesome-python)
+
+
+## tutorials
+
+In this section some tutorials can be found
+
+### basics
+
+Notebook with some basic statistical visualizations with the help of some libraries like seaborn, matplot or plotly
+
+![alt text](https://github.com/hadze/machinelearning/blob/master/images/statistical_visualizations.png?raw=true)
+
