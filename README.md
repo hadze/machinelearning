@@ -21,7 +21,7 @@ In this section some tutorials can be found
 
 ### basics
 
-Notebook with some basic statistical visualizations with the help of some libraries like seaborn, matplot or plotly
+Notebook with some [basic statistical visualizations](https://github.com/hadze/machinelearning/tree/master/tutorials/basics) with the help of some libraries like seaborn, matplot or plotly
 
 ![alt text](https://github.com/hadze/machinelearning/blob/master/images/statistical_visualizations.png?raw=true)
 
