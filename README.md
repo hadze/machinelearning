@@ -25,3 +25,10 @@ Notebook with some [basic statistical visualizations](https://github.com/hadze/m
 
 ![alt text](https://github.com/hadze/machinelearning/blob/master/images/statistical_visualizations.png?raw=true)
 
+### -dataframe
+
+How to do some basic operation with dataframes
+
+### -nlp
+
+Some NLP examples
