@@ -2,7 +2,11 @@
 This repository contains some [tutorials](https://github.com/hadze/machinelearning/tree/master/tutorials) I programmed to learn more about MachineLearning topics as well as some basic concepts in the same area. I hope you find it useful. Currently I am busy creating a ML framework to be able to react faster to requests and competitions. More about this soon... 
 
 ## dockerfile
-This Dockerfile contains the environment which is used and proposed by kaggle for general competitions. If you don't want to use the "all-round" variant, I have also created some yaml files in the subfolders, which only contain the minimal config of required libraries.
+Kaggle is a good place to learn machine learning and data science. I think its docker image is a good option for data science development environment for the following scenarios:
+* if I want to do local experiments for Kaggle’s kernel-only competitions, this is exactly the same environment of Kaggle kernels; and it is can be kept up-to-date by simply rebuilding the latest images.
+* for everything else, the list of packages included in the image is built by the Kaggle community and therefore includes most useful tools that I know or don’t know about; this is much easier than building your own list of packages.
+
+This Dockerfile here contains the environment which is used and proposed by kaggle for general competitions. If you don't want to use the "all-round" variant, I have also created some yaml files in the subfolders, which only contain the minimal config of required libraries.
 
 ## kaggle competitions
 More about this soon, too...
