@@ -19,3 +19,7 @@ EXPOSE 6006
 # TODO: read env "tensorboard" out of yml-file line 7
 # Start running tensorboard when container is launched
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "tensorboard", "python", "/opt/conda/envs/tensorboard/lib/python3.7/site-packages/tensorboard/main.py", "--logdir=checkpoints"]
+
+
+# build image via terminal/console, e.g.:
+# docker build . -t tensorboard
