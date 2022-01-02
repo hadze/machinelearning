@@ -8,6 +8,10 @@ Kaggle is a good place to learn machine learning and data science. I think its d
 
 This Dockerfile here contains the environment which is used and proposed by kaggle for general competitions. If you don't want to use the "all-round" variant, I have also created some yaml files in the subfolders, which only contain the minimal config of required libraries.
 
+You can find additional information on how to use Docker, Containers, Images and Dockerfiles in this section of my repositories:
+[Links to Docker](https://github.com/hadze/kubernetes#docker-essentials--links)
+
+
 ## kaggle competitions
 More about this soon, too...
 
